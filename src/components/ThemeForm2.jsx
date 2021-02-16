@@ -198,6 +198,7 @@ const ThemeForm2  = observer(() => {
 										<Button
 												variant="outlined"
 												size="small"
+												color={'primary'}
 												className={classes.button}
 												onClick={handleAllRight}
 												disabled={left.length === 0}
@@ -210,6 +211,7 @@ const ThemeForm2  = observer(() => {
 										<Button
 												variant="outlined"
 												size="small"
+												color={'primary'}
 												className={classes.button}
 												onClick={handleCheckedRight}
 												disabled={leftChecked.length === 0}
@@ -222,6 +224,7 @@ const ThemeForm2  = observer(() => {
 										<Button
 												variant="outlined"
 												size="small"
+												color={'primary'}
 												className={classes.button}
 												onClick={handleCheckedLeft}
 												disabled={rightChecked.length === 0}
@@ -234,6 +237,7 @@ const ThemeForm2  = observer(() => {
 										<Button
 												variant="outlined"
 												size="small"
+												color={'primary'}
 												className={classes.button}
 												onClick={handleAllLeft}
 												disabled={right.length === 0}

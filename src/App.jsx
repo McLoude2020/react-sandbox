@@ -20,6 +20,7 @@ import ViewDialogs from "./views/Dialogs";
 import ViewNavi from "./views/Navi";
 import ViewTables from "./views/Tables";
 import ViewTypo from "./views/Typo";
+import ViewPattern from "./views/PatternExample";
 
 
 const useStyles = makeStyles(theme => ({
@@ -76,6 +77,7 @@ const App = observer(() => {
 								<Route exact path='/Tabs'><ViewTabPage1/></Route>
 								<Route exact path='/Tables'><ViewTables/></Route>
 								<Route exact path='/Typo'><ViewTypo/></Route>
+								<Route exact path='/PatternExample'><ViewPattern/></Route>
 							</Switch>
 						</Box>
 					</main>

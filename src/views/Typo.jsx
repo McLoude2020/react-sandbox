@@ -17,11 +17,18 @@ import {useHistory} from "react-router";
 import {useStores} from "../hooks/useStores";
 import {ContactlessTwoTone} from "@material-ui/icons";
 import Container from "@material-ui/core/Container";
+import {Link} from "@material-ui/core";
 
-
+const useStyles = makeStyles((theme) => ({
+	root: {
+		'& > * + *': {
+			marginLeft: theme.spacing(2),
+		},
+	},
+}));
 const Start = observer(() => {
-	const history = useHistory();
 	const {toolbarHandler} = useStores();
+	const classes = useStyles();
 
 	useEffect(() => {
 		toolbarHandler.changeToolbar({title: "Typografie", showMenu: true});
@@ -68,6 +75,19 @@ const Start = observer(() => {
 				<Typography variant={"overline"} m={3}>Overline (wird zu h6-Element)</Typography>
 				<Divider/>
 				<Typography variant={"button"} m={3}>Button (wird zu span-Element)</Typography>
+				<Divider/>
+
+				<Typography className={classes.root}>
+					<Link href="#">
+						Link
+					</Link>
+					<Link href="#" color="inherit">
+						{'color="inherit"'}
+					</Link>
+					<Link href="#" variant="body2">
+						{'variant="body2"'}
+					</Link>
+				</Typography>
 				<Divider/>
 
 			</Container>

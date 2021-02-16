@@ -1,29 +1,16 @@
 import React, {useEffect} from 'react';
 import { ThemeProvider, useTheme, makeStyles } from '@material-ui/core/styles';
-import {
-	MenuItem,
-	Typography, fade, Box,
-} from "@material-ui/core";
+import {MenuItem,Typography, fade, Box,} from "@material-ui/core";
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import AppBar from "@material-ui/core/AppBar";
 import {
-	ArrowBack,
-	Brightness4,
-	Brightness7, CheckBox, Dashboard, Launch,
-	Layers, ListAlt,
-	Lock,
-	More,
-	Notifications, PictureInPictureAlt, QuestionAnswer,
-	Search,
-	Settings, Tab, TableChart, TextFields, TextFormat, ViewList
+	ArrowBack,CheckBox, Dashboard, Launch,ListAlt,Lock,More,PictureInPictureAlt, QuestionAnswer,Search,
+	Settings, Tab, TableChart, TextFields, ViewList
 } from "@material-ui/icons";
 import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
-import MailIcon from "@material-ui/icons/Mail";
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
-import InboxIcon from "@material-ui/icons/Inbox";
-import Badge from "@material-ui/core/Badge";
 import Toolbar from "@material-ui/core/Toolbar";
 import Menu from "@material-ui/core/Menu";
 import List from "@material-ui/core/List";
@@ -46,9 +33,6 @@ import Switch from "@material-ui/core/Switch";
 const drawerWidth = 300;
 
 const useStyles = makeStyles((theme) => ({
-
-
-
 	grow: {
 		flexGrow: 1,
 	},
@@ -173,7 +157,7 @@ const useStyles = makeStyles((theme) => ({
 		display: 'flex',
 		alignItems: 'center',
 		justifyContent: 'flex-end',
-		padding: theme.spacing(3, 1),
+		minHeight: 64,
 	},
 	content: {
 		flexGrow: 1,
@@ -414,6 +398,7 @@ const ThemeAppBar = observer(({darktheme}) => {
 							</IconButton>
 						</div>
 					</Toolbar>
+					<Divider />
 				</AppBar>
 				<Drawer
 						variant="permanent"
@@ -484,9 +469,9 @@ const ThemeAppBar = observer(({darktheme}) => {
 					<Divider />
 					<Box m={3}><Typography variant={"h5"}>Beispielseiten</Typography></Box>
 					<List>
-						<ListItem button onClick={() => history.push("/")}>
+						<ListItem button onClick={() => history.push("/PatternExample")}>
 							<ListItemIcon ><QuestionAnswer /></ListItemIcon>
-							<ListItemText primary={'- Später -'}  />
+							<ListItemText primary={'Pattern-Example'}  />
 						</ListItem>
 					</List>
 				</Drawer>

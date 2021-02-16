@@ -39,21 +39,16 @@ import DeleteIcon from "@material-ui/icons/Delete";
 import BeachAccessIcon from "@material-ui/icons/BeachAccess";
 import {ExpandLess, ExpandMore, StarBorder} from "@material-ui/icons";
 import IconButton from "@material-ui/core/IconButton";
+import TableCell from "@material-ui/core/TableCell";
 
 
 const useStyles = makeStyles((theme) => ({
-	rootItemlist: {
-		width: '100%',
-		maxWidth: 360,
-		backgroundColor: theme.palette.background.paper,
-	},
 	rootList: {
 		width: '100%',
 	},
 	rootNested: {
 		width: '100%',
 		maxWidth: 360,
-		backgroundColor: theme.palette.background.paper,
 	},
 	nested: {
 		paddingLeft: theme.spacing(4),
@@ -95,7 +90,7 @@ function generate(element) {
 const ListViewExample1 = observer(() => {
 	const classes = useStyles();
 	const history = useHistory();
-	const {toolbarHandler} =  useStores();
+	const {toolbarHandler, themeStore} =  useStores();
 	const [selectedIndex, setSelectedIndex] = React.useState(1);
 	const [open, setOpen] = React.useState(true);
 

@@ -8,6 +8,9 @@ import TableHead from "@material-ui/core/TableHead";
 import Table from "@material-ui/core/Table";
 import TableContainer from "@material-ui/core/TableContainer";
 import Paper from "@material-ui/core/Paper";
+import CardHeader from "@material-ui/core/CardHeader";
+import CardContent from "@material-ui/core/CardContent";
+import {Card} from "@material-ui/core";
 
 const columns = [
 	{ id: 'name', label: 'Name', minWidth: 170 },
@@ -68,7 +71,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
-export default function ThemeTables() {
+export default function ThemeTablePaginator() {
 
 	const classes = useStyles();
 	const [page, setPage] = React.useState(0);
@@ -84,7 +87,11 @@ export default function ThemeTables() {
 	};
 
 	return (
-			<Paper className={classes.root}>
+			<Card>
+				<CardHeader
+						title="Tabelle mit Paginator"
+				/>
+				<CardContent>
 				<TableContainer className={classes.container}>
 					<Table aria-label="sticky table">
 						<TableHead>
@@ -128,6 +135,7 @@ export default function ThemeTables() {
 						onChangePage={handleChangePage}
 						onChangeRowsPerPage={handleChangeRowsPerPage}
 				/>
-			</Paper>
+				</CardContent>
+				</Card>
 	);
 }
